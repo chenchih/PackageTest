@@ -1,3 +1,22 @@
+Metadata-Version: 2.1
+Name: pkgTest
+Version: 0.0.2
+Summary: My first Python Hello world library
+Home-page: UNKNOWN
+Author: ChenChih.Lee
+Author-email: jacklee26@gmail.com
+License: MIT
+Keywords: python,video,stream,video stream,camera stream,sockets
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # Test Package 
 
 [![GitHub license](https://img.shields.io/github/license/chenchih/PackageTest)](https://github.com/chenchih/PackageTest/blob/main/LICENSE)
@@ -55,4 +74,6 @@ cal.divide(5,5)
 25 #multiply
 1  #divide
 ```
+
+
 

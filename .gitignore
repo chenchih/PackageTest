@@ -1,0 +1,14 @@
+# build files
+build/*
+
+# python package distribution files
+dist/*
+pkgTest/*
+*.pkgTest.egg-info/*
+
+# compiled bytecode
+*.pyc
+
+# OS generated files
+.DS_Store
+.DS_Store?

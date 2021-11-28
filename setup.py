@@ -1,11 +1,13 @@
 from setuptools import setup, find_packages
-import codecs
 import os
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = 'My first Python Hello world library'
 #LONG_DESCRIPTION = 'A basic hello world package.'
 
+with open("README.md", 'r') as f:
+    long_description = f.read()
+    
 # Setting up
 setup(
     name="pkgTest",
@@ -15,7 +17,9 @@ setup(
     license='MIT',
     description=DESCRIPTION,   
     #long_description_content_type="text/markdown",
-    #long_description=long_description,
+    #long_description=long_description, 
+    long_description_content_type="text/markdown",
+    long_description=long_description,
     packages=find_packages(),
     #install_requires=['opencv-python', 'pyautogui', 'pyaudio'],
     install_requires=[],

@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+note.txt
+requirements.txt
+setup.py
+pkgTest/__init__.py
+pkgTest/calculate.py
+pkgTest/helloworld.py
+pkgTest.egg-info/PKG-INFO
+pkgTest.egg-info/SOURCES.txt
+pkgTest.egg-info/dependency_links.txt
+pkgTest.egg-info/top_level.txt
