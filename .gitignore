@@ -8,7 +8,7 @@ develop-eggs/*
 eggs/
 .eggs/
 sdist/
-
+MANIFEST
 
 
 # OS generated files
