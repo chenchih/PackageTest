@@ -3,11 +3,12 @@ build/*
 
 # python package distribution files
 dist/*
+develop-eggs/*
 *.egg-info/*
 eggs/
 .eggs/
-# compiled bytecode
-*.pyc
+sdist/
+MANIFEST
 
 # OS generated files
 .DS_Store
