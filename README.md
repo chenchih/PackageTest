@@ -74,15 +74,14 @@ cal.divide(5,5)
       
       > 1.create build: #python setup.py sdist bdist_wheel
       
-    - **Code:setup.py**       
-      
-       ```
-          setuptools.setup()
-          import setuptools
-       ```
-
-     - **Code:setup.cfg**         
-      ```
+    - **Code:setup.py**      
+    ```python
+     setuptools.setup()          
+     import setuptools
+     ```
+     
+     - **Code:setup.cfg**             
+     ```
     [metadata]
     name = pkgTest
     version = 0.0.1
@@ -108,7 +107,7 @@ cal.divide(5,5)
     * =
         *.xml
         *.txt
-      ```
+   ```
 
 - #### Method 3 using myproject.toml and setup.cfg(using metadata)
 
@@ -121,7 +120,7 @@ cal.divide(5,5)
      >    OR 
      >    #pip install package name
 
-	-  **Code:** myproject.toml
+-  **Code:** myproject.toml
 
     ```
     [build-system]
