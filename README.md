@@ -56,3 +56,78 @@ cal.divide(5,5)
 1  #divide
 ```
 
+
+
+## 3. Package and Distribution building 
+
+- #### Method 1 using setup.py
+
+  - **How to build:** 
+    
+    > 1. Install build package #py -m pip install --upgrade build     
+    > 2. create build: #python setup.py sdist bdist_wheel
+
+
+- #### Method 2 using setup.py and setup.cfg(using metadata)
+
+    - **How to build:**     
+      
+      > 1.create build: #python setup.py sdist bdist_wheel
+      
+    - **Code:setup.py**       
+      
+       ```
+          setuptools.setup()
+          import setuptools
+       ```
+
+     - **Code:setup.cfg**         
+      ```
+    [metadata]
+    name = pkgTest
+    version = 0.0.1
+    author = ChenChih.Lee
+    author_email=jacklee26@gmail.com
+    description = My first Python Hello world library
+    long_description = file: README.md
+    long_description_content_type = text/markdown
+    url = https://github.com/chenchih/PackageTest
+    license = MIT
+    classifiers = 
+    Development Status :: 1 - Planning
+    Intended Audience :: Developers
+    Programming Language :: Python :: 3
+    Operating System :: Unix
+    Operating System :: MacOS :: MacOS X
+    Operating System :: Microsoft :: Windows
+    [options]
+    include_package_data = True
+    packages = find:
+    install_requires = selenium
+    [options.package_data]
+    * =
+        *.xml
+        *.txt
+      ```
+
+- #### Method 3 using myproject.toml and setup.cfg(using metadata)
+
+  - **How to build:**
+    
+     > 1. Install build package #py -m pip install --upgrade build     
+     > 2. Create build: #python -m build     >
+     > 3. install it           
+     >    #pip install .    
+     >    OR 
+     >    #pip install package name
+
+	-  **Code:** myproject.toml
+
+    ```
+    [build-system]
+    requires = [
+        "setuptools>=42",
+        "wheel"
+    ]
+    build-backend = "setuptools.build_meta"
+    ```
