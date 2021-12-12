@@ -70,44 +70,47 @@ cal.divide(5,5)
 
 - #### Method 2 using setup.py and setup.cfg(using metadata)
 
-    - **How to build:**     
-      
-      > 1.create build: #python setup.py sdist bdist_wheel
-      
-    - **Code:setup.py**      
-    ```python
-     setuptools.setup()          
-     import setuptools
-     ```
+   - **How to build:**     
      
-     - **Code:setup.cfg**             
-     ```
-    [metadata]
-    name = pkgTest
-    version = 0.0.1
-    author = ChenChih.Lee
-    author_email=jacklee26@gmail.com
-    description = My first Python Hello world library
-    long_description = file: README.md
-    long_description_content_type = text/markdown
-    url = https://github.com/chenchih/PackageTest
-    license = MIT
-    classifiers = 
-    Development Status :: 1 - Planning
-    Intended Audience :: Developers
-    Programming Language :: Python :: 3
-    Operating System :: Unix
-    Operating System :: MacOS :: MacOS X
-    Operating System :: Microsoft :: Windows
-    [options]
-    include_package_data = True
-    packages = find:
-    install_requires = selenium
-    [options.package_data]
-    * =
-        *.xml
-        *.txt
+     > 1.create build: #python setup.py sdist bdist_wheel
+     
+   - **Code:setup.py**      
+   ```python
+    setuptools.setup()          
+    import setuptools
    ```
+
+    - **Code:setup.cfg**             
+    ```
+   [metadata]
+   name = pkgTest
+   version = 0.0.1
+   author = ChenChih.Lee
+   author_email=jacklee26@gmail.com
+   description = My first Python Hello world library
+   long_description = file: README.md
+   long_description_content_type = text/markdown
+   url = https://github.com/chenchih/PackageTest
+   license = MIT
+   classifiers = 
+   Development Status :: 1 - Planning
+   Intended Audience :: Developers
+   Programming Language :: Python :: 3
+   Operating System :: Unix
+   Operating System :: MacOS :: MacOS X
+   Operating System :: Microsoft :: Windows
+   [options]
+   include_package_data = True
+   packages = find:
+   install_requires = selenium
+   [options.entry_points]
+   console_scripts =
+       helloworld-cli = pkgTest.helloworld:hellotest
+   [options.package_data]
+   * =
+       *.xml
+       *.txt
+    ```
 
 - #### Method 3 using myproject.toml and setup.cfg(using metadata)
 

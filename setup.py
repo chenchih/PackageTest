@@ -34,12 +34,18 @@ setup(
     include_package_data=True,
     package_data={'pkgTest': ['tt/*.txt']},
     packages=find_packages(),
+    #packages=find_packages(exclude=['*_files']),
     #requirement will automatic install it
     #install_requires=['opencv-python', 'pyautogui', 'pyaudio'],
     #install_requires=['selenium==3.141.0']
     install_requires=install_requires,   
+    #keywords=['python', 'video', 'stream', 'video stream', 'camera stream', 'sockets'],
+    entry_points={
+    'console_scripts': [
+        'helloworld-cli = pkgTest.helloworld:hellotest',
+    ],
+},
 
-    keywords=['python', 'video', 'stream', 'video stream', 'camera stream', 'sockets'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
