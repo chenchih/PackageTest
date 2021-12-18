@@ -3,7 +3,7 @@ from os import path as OSPath
 import io
 here = OSPath.abspath(OSPath.dirname(__file__))
 
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 DESCRIPTION = 'My first Python Hello world library'
 #LONG_DESCRIPTION = 'A basic hello world package.'
 
@@ -21,7 +21,7 @@ install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
 
 # Setting up
 setup(
-    name="pkgTest",
+    name="pkgTests",
     version=VERSION,
     author='ChenChih.Lee',
     author_email="jacklee26@gmail.com",
@@ -32,7 +32,7 @@ setup(
     long_description=long_description,
     #adding packagedata for bdistr
     include_package_data=True,
-    package_data={'pkgTest': ['tt/*.txt']},
+    package_data={'pkgTest': ['test_use/*.txt']},
     packages=find_packages(),
     #packages=find_packages(exclude=['*_files']),
     #requirement will automatic install it
